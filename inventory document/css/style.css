@@ -1,0 +1,123 @@
+/* Animations: */
+
+@keyframes up_down {
+    
+    0%      { transform: translateY(-1px); }
+    50%     { transform: translateY(1px) }
+    100%    { transform: translateY(-1px); }
+    
+}
+
+
+/* general things here */
+
+/* edits the entire site. */
+html {
+
+    font-family: "Roboto Mono", monospace;
+    color : white;
+    background-color : rgb(53, 53, 53);
+    overflow: -moz-hidden-unscrollable;
+
+}
+
+/* customize the Font size of codes */
+pre, code {
+    
+    font-size: 15px;
+    
+}
+
+/* customize the button appearence */
+button {
+    
+    color : white;
+    transform : scale(20px, 20px);
+    border-radius: 6px;
+    border-style: groove;
+    border-color: rgb(103, 103, 103);
+    border-width: 4px;
+    background-color: rgb(83, 83, 83);
+    transition: all 0.25s ease-in-out;
+    
+}
+button:hover {
+    
+    border-color: rgb(123, 123, 123);
+    background-color: rgb(103, 103, 103);
+    transform: translateY(-10%);
+    border-width: 4px;
+    border-color: wheat;
+    
+    
+}
+button:active {
+    
+    border-color: rgb(103, 103, 103);
+    background-color: rgb(83, 83, 83);
+    transform: transformY(10%);
+    
+}
+
+/* customize the Links */
+a {
+    
+    font-size: 20px;
+    color:aqua;
+    border-radius: 4.5px;
+    border-style:solid;
+    border-color: rgb(103, 103, 103);
+    border-width: 3.5px;
+    background-color: rgb(83, 83, 83);
+    
+}
+a:hover {
+    
+    border-radius: 8px;
+    border-color: rgb(123, 123, 123);
+    border-width: 3.5px;
+    background-color: rgb(103, 103, 103);
+    width: 20px;
+    
+}
+a:active {
+    
+    border-radius: 4.5px;
+    border-style:solid;
+    border-color: rgb(103, 103, 103);
+    border-width: 3.5px;
+    background-color: rgb(83, 83, 83);
+    
+}
+
+/* customize images */
+img {
+  
+    filter: drop-shadow(8px 8px 10px #2d2d2d);
+    transition: all 0.25s ease-in-out;
+    
+}
+img:hover {
+    
+    transform : translateY(-3.5px);
+    
+}
+
+/* customize the Paragraphs */
+p {
+    
+    transition : all 0.5s ease-in-out;
+    
+    animation-name: up_down;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    
+}
+
+/* customize Divs */
+div {
+    
+    border-radius: 4px;
+    
+}

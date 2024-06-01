@@ -1,0 +1,105 @@
+/* Animations and Keyframes */
+
+@-webkit-keyframes slide {
+    100%   { transform: translate(0px,100px); }
+    100% { transform: translate(0px,0px); }
+  }
+  @keyframes slide {
+    100%   { transform: translate(0px,100px); }
+    100% { transform: translate(0px,0px); }
+  }
+  
+  /* slide left */
+  
+@keyframes slide_left {
+  
+  100% { transform : translateX(0px); }
+  
+}
+
+/*************************************************************************************************** 
+
+Classes 
+
+****************************************************************************************************/
+
+/* customize the Title */
+.title {
+
+  transform: translateY(-180%);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  
+  animation-name: slide;
+  animation-duration: 1s; 
+  animation-fill-mode: forwards;
+  
+}
+
+/* customize the Header animation */
+
+.header {
+  
+  transform: translateX(-400px);
+  animation-name: slide_left;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  
+}
+
+/* customize the img1 */
+.img1 {
+  
+  transition: all 0.5s ease-in-out;
+  
+}
+
+
+/* the Component image. */
+.component {
+  
+  display: block;
+  width: 25%;
+
+}
+
+/* stylize the Scripts div. */
+.scripts {
+  
+  background: rgb(80, 80, 80);
+  background-blend-mode: darken;
+  
+}
+
+
+/************************************
+
+IDs
+
+*************************************/
+
+#test1 {
+  
+  transition : all 0.5s ease-in-out;
+  
+}
+
+#div2-rotate {
+  
+  transition : all 0.25s ease-in-out;
+  width: 30px;
+  height: 30px;
+  background-color: wheat;
+  
+}
+
+#code {
+  
+  transition: all 0.25s ease-in-out;
+  
+}
+#code:hover {
+  
+  transform : translateX(-30%);
+  
+}
