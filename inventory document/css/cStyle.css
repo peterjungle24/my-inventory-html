@@ -17,6 +17,15 @@
   
 }
 
+@keyframes jump {
+  
+  25% { transform: translateY(-10px); transform: rotateX(50deg); }
+  50% { transform: translateY(0px); transform: rotateX(0deg); }
+  75% { transform: translateY(-10px); transform: rotateX(-50deg); }
+  100% { transform: translateY(0px); transform: rotateX(0deg)}
+  
+}
+
 /*************************************************************************************************** 
 
 Classes 
@@ -101,5 +110,16 @@ IDs
 #code:hover {
   
   transform : translateX(-30%);
+  
+}
+
+#script {
+  
+  
+  
+  animation-name: jump;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
   
 }

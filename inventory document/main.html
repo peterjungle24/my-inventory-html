@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <link rel="stylesheet" href="css/cStyle.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/langs.css">
+        <link rel="stylesheet" href="syntax/prism.css">
+        
+        <!-- Normal things now -->
+        
+        <meta charset="utf-8">
+        <title> Inventory lol</title>
+        
+    </head>
+    <body>
+        
+        <h1 class="title"> Inventory <strong style="color:yellow">YEAH!</strong></h1>
+        
+        <!-- nah-->
+        <details>
+            
+            <summary> nah </summary>
+            <div id="summary">
+                
+                <h2> Nothing useful, just a color pick up button </h2>
+                <input type="color" style="width: 50px; height: 50px;">
+                <br>
+                
+            </div>
+        </details>
+        
+        <!-- Creation -->
+        <details>
+            
+            <summary> Creation </summary>
+            <div id="inv-0">
+            
+            <hr>
+            <h2 class="header"> Step 1 --> Creation </h2>
+            
+            <p> Create one <strong> Empty Object</strong> for store scripts and Inventory objects</p>
+            <p> i will name it with <code class="lang-csharp"> Inventory</code></p>
+            <img src="image/invs/inv-empty.PNG" title="Creating a empty object">
+            
+            <br>
+            
+            <p> Create one <strong>Canvas</strong> object, inside of the Empty Object. </p>
+            <p> i will name with <code class="lang-csharp"> inv_canva.</code></p>
+            <code class="lang-csharp"> UI/Canvas</code>
+            
+            <br>
+            
+            <img src="image/invs/inv-canva.PNG" title="Creating a canvas object. UI/Canvas">
+            
+            <p> Create one <strong> Image Object</strong> inside of the Canvas. Will be our inventory background.</strong></p>
+            <p> I will name it with <code class="lang-csharp">inv_back.</code></p>
+            
+            <br>
+            
+            <img src="image/invs/inv-image.PNG" title="Creating a Image object for background">
+            <p> I will make the Inventory visual myself. </p>
+            
+            </div>
+        
+        </details>
+        
+        <!-- Decoration -->
+        <details>
+            
+            <summary> Decoration</summary>
+            <div id="inv-1">
+                
+                <hr>
+                <h2 class="header"> Step 2 --> Decorating Inventory</h2>
+                <h3> <strong>NOTE: you can do whatever you want, my way is just an example.</strong> </h3>
+                <br>
+                <p> Set the color.</p>
+                <img src="image/invs/inv1-color.PNG" title="Setting color">
+                <p> I will set the color with: </p>
+                <code class="lang-csharp"> #235015 //hex </code>
+                <br>
+                <code class="lang-csharp"> (35, 80, 21) //rgb </code>
+                <br>
+                <img src="image/invs/inv1-color1.PNG" title="Setting the color">
+                <p> In this way, my inventory can be like this: </p>
+                <img src="image/invs/inv1-inventory.PNG" title="the inventory">
+                <h3> NOTE: ALWAYS place the anchor in top-left to prevent resizing problems. </h3>
+                <img src="image/invs/inv1-archor.PNG" title="Archors on Top-Left">
+                <br>
+                <p> Create a text (optional) for Inventory title. </p>
+                <p> I will name it with <code class="lang-csharp">inv_title</code></p>
+                <img src="image/invs/inv1-title.PNG" title="Creating a Title">
+                <p> I am using <code class="lang-csharp">TextMash Pro</code> bc it have more options and its better for me.</p>
+                <p> You can customize the text in the Inspector window.</p>
+                <img src="image/invs/inv1-inventory1.PNG" title="Inspector window">
+                <p> well, for now, this is my result so far: </p>
+                <img src="image/invs/inv1-result.PNG" title="My result so far:">
+                
+            </div>
+        </details>
+            
+        <!-- Slots -->
+        <details>
+            
+            <summary> Slots </summary>
+            <div id="inv-2">
+            
+                <hr>
+                <h2 class="header"> Step 3 --> Slots </h2>
+                <p> It's here where i will make the slots </p>
+                <br>
+                <p> Create a empty object for Slots inside of the [ Canvas ] object. </p>
+                <p> I will name that with <code class="lang-csharp">Slogs</code></p>
+                <img src="image/invs/inv2-inventory.PNG" title="Inventory structure.">
+                <p> Please make sure to set the anchor to <code class="lang-sharp">top-left</code> and resize it to fill the inventory </p>
+                <img src="image/invs/inv2-slot1.PNG" title="1">
+                <img src="image/invs/inv2-slot2.PNG" title="2">
+                <br>
+                <p> Create two objects inside of the slot: </p>
+                <ul>
+                    
+                    <li> A <code class="lang-csharp"> Image</code> object inside of the slot </li>
+                    <li> A <code class="lang-csharp"> Button</code> object inside of the <code class="lang-csharp"> Image</code> </li>
+                    
+                </ul>
+                <img src="image/invs/inv2-slots.PNG" title="Actual structure" style="width: 500px;">
+                <p> in Image object, you can use sprite as Slot background </p>
+                <img src="image/invs/inv2-image.PNG" title="why are you reading that?">
+                <br>
+                <p> in Button object, you can set the image as your item. You can (or need?) use a Transparent background</p>
+                <img src="image/invs/inv2-item.PNG" title="bro">
+                <p> I will use these items just for example. </p>
+                <img src="image/invs/inv2-items.PNG" title="Item sprites. All its PNG file">
+                <img src="image/invs/inv2-inv.PNG" title="I have the [ specific_key ] and you not!">
+                <p> Please, make archors in [top-left], instead of the center. </p>
+                
+            </div>
+        
+        </details>
+        
+        <!-- scripts -->
+        <details>
+            
+            <summary> scripts </summary>
+            
+            <div>
+                
+                <hr>
+                <h2 class="header"> Step 4 --> Scripts for use</h2>
+                
+                <p> This is where I will define the scripts </p>
+                
+                <h2 id="script"> Centralize (centra.cs) </h2>
+                <p> Will handle the [auto-center] button function </p>
+                <h2>put this script in <strong>Button</strong> object</h2>
+                
+                <!-- centra -->
+                <pre>
+                    <code class="lang-csharp">
+using UnityEngine;
+namespace Inventory
+{
+    /// &lt;summary&gt; 
+    /// Uses this class to centralize the item for the slot. 
+    /// &lt;/summary&gt;
+    public class centra : MonoBehaviour
+    {
+        void Update()
+        {
+            //put that on Button
+            //this code will centralize the buttons to the center of the slot.
+            transform.position += (transform.parent.position - transform.position) * 4 * Time.deltaTime;
+        }
+    }
+}
+                    </code>
+                </pre>
+                
+                <h2 id="script"> Inventory Methods (inv.cs)</h2>
+                <p> Will handle somethings about the inventory </p>
+                <h2>put this script in <strong>Canvas</strong> object</h3>
+                
+                <!--inv -->
+                <pre>
+                    <code class="lang-csharp">
+using UnityEngine;
+
+public class inv : MonoBehaviour
+{
+    public GameObject mouseItem;    //object that will be centralized.
+    public item[] item;             //item
+
+    public void DragItem(GameObject btn)
+    {
+        mouseItem = btn;
+        mouseItem.transform.position = Input.mousePosition;
+    }
+
+    public void DropItem(GameObject btn)
+    {
+        if(mouseItem != null)   //if its using the Mouse
+        {
+            Transform aux = mouseItem.transform.parent;
+
+            mouseItem.transform.SetParent(btn.transform.parent);
+            btn.transform.SetParent(aux);
+        }
+    }
+}
+                    </code>
+                </pre>
+
+            </div>
+            
+        </details>
+        
+        <!-- Continuing -->
+        <details>
+            
+            <summary> Continuing </summary>
+            
+            <div id="inv-3">
+                
+                <hr>
+                <h2 class="header"> Step 5 --> Idk </h2>
+                <p>
+                    
+                    Well, as some things about Slots are already ready, we can continue with <code class="lang-csharp">drag-drop</code>.
+                    <br>
+                    This means that we will give the functionality of being able to drag items
+                    
+                </p>
+                <p> so, Lets select our Button object. </p>
+                <img src="image/invs/inv3-slot_selected.PNG" title="Selecting the [Button] object">
+                <p> with the slot button selected, we need apply the <code class="lang-csharp">EventTrigger</code> component. in Inspector window </p>
+                <img src="image/invs/inv3-eventTrigger.PNG" title="Applying the component">
+                <p>and with the created component:</p>
+                <ul>
+                    
+                    <li>Click on <code class="lang-csharp">Add New Event Type</code> </li>
+                    <li>click on <strong>drop</strong> option </li>
+                    <li> Click on <code class="lang-csharp">+</code> button</li>
+                    
+                </ul>
+                
+                <h1>1</h1><img src="image/invs/inv3-eventTrigger1.PNG" title="Aplying a new Event type">
+                <h1>2</h1><img src="image/invs/inv3-evenTrigger2.PNG" title="Applying a Drop event type">
+                <h1>3</h1><img src="image/invs/inv3-eventTrigger3.PNG" title="Creating a something in a list">
+                <p> You can see this window: </p>
+                <img src="image/invs/inv3-evenTrigger4.PNG" title="Result">
+                <p>and now comes the <code class="lang-csharp">inv.cs</code> script placed in <code class="lang-csharp">inv_canva</code></p>
+                <p>pull the Canvas object to the field below <code class="lang-csharp">Runtime</code></p>
+                <img src="image/invs/inv3-dragEv.PNG" title="drop the Canvas object for here">
+                <p>Click on <code class="lang-csharp">No Function</code>, where you can find the <strong>inv</strong> class</p>
+                <img src="image/invs/inv3-dragEv1.PNG" title="Selecting the function">
+                <p>Inside of the <code class="lang-csharp">inv</code> class, you can find the method called <strong>DragItem()</strong> and select it</p>
+                <img src="image/invs/inv3-dragEv2.PNG" title="DragItem();">
+                <p> And drag the <code class="lang-csharp">Button</code> object and drop in the field below of the function</p>
+                <img src="image/invs/inv3-dragEv3.PNG" title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+                <p> 
+                    Well, you can drag the button now
+                    <br>
+                    but you can realize one thing: if you stop the cursor, the button will go to the center of the slot.
+                </p>
+                <p> so, for resolve this problem, we will deactivate the script. </p>
+                <p> Click on the <strong>+</strong></p>
+                <img src="image/invs/inv3-addEvent.PNG" title="Clicking on the +">
+                <p> and drag and drop your Button for inside of the field. </p>
+                <p> and add the <code class="lang-csharp">centra</code> and add the <code class="lang-csharp">bool Enabled</code> here</p>
+                <img src="image/invs/inv3-addEvent1.PNG" title="adding the Centra">
+                <p>
+                    but the detail is: If you let go, the script is still disabled.
+                    <br>
+                    so for this we will add a <code class="lang-csharp">EventTrigger type</code> for <strong>Pointer Up</strong>
+                </p>
+                <img src="image/invs/inv3-addEvent_fix.PNG" title="Pointer Up event">
+                <p>and now, do the same thing in the Drop event with Centra, but enabling it</p>
+                <img src="image/invs/inv3-addEvent2.PNG" title="adding the event">
+                <p> And done, your slots can be dragged/dropped now.</p>
+                <p> But have something yet.... </p>
+                
+            </div>
+            
+        </details>
+        
+        <!-- Slots need interact with others -->
+        <details>
+            
+            <summary> Slots need interact with others </summary>
+            
+            <div id="inv-4">
+                
+                <hr>
+                
+                <h2 class="header"> Step 6 --> Slot interaction </h2>
+                <p>If you duplicate this slot, and name it with second slot, you can make 2 slots: </p>
+                <img src="image/invs/inv4-so_far.PNG" title="so far now.">
+                <p> (I am bad on pixel art, sorry) </p>
+                <p> 
+                    But anyways, you can drag and drop above them for change their slots
+                    <br>
+                    but if you try.... happens <strong>NOTHING</strong>
+                    <br>
+                    its because we didtn programmed the drop yet. lol
+                </p>
+                <p> so, we will add a new EventTrigger called <code class="lang-csharp">Drop</code> </p>
+                <img src="image/invs/inv4-addEvent.PNG" title="adding a Drop event">
+                <p> and yes, you need drag and drop the Canvas object to the field here. </p>
+                <img src="image/invs/inv4-ev.PNG" title="draggin and droppin the object to the field">
+                <p> and now, we will choose the [ inv ] one.</p>
+                <img src="image/invs/inv4-ev1.PNG" title="using the [inv] one">
+                <p> and instead of <code class="lang-csharp">DragItem</code>, we will choose the <code class="lang-csharp">DropItem</code></p>
+                <img src="image/invs/inv4-ev2.PNG" title="DropItem">
+                <p> and also, drag and drop the button for this field below: </p>
+                <img src="image/invs/inv4-ev3.PNG" title="yes">
+                <p>
+                     And now, we will select the both images <img src="image/invs/inv4-select.PNG" title="select the slots">
+                     <br>
+                     and then, add a component called <code class="lang-csharp">Graphic RayCast</code> 
+                </p>
+                <img src="image/invs/inv4-component.PNG" title="Adding a component">
+                <p> It will add two components: a Canvas and the Graphic RayCast (ignore the warning for now, its from my laptop)</p>
+                <img src="image/invs/inv4-component1.PNG" title="two components: Slugg and Slugg">
+                <p> and make sure if you enabled this checkmark: It will override the layer </p>
+                <img src="image/invs/inv4-component2.PNG" title="sorting override: true">
+                <p> I will set it to 4 </p>
+                <br>
+                <p> Now, i will add more one event in Button object. <br>create a new in Drag event, and drag the Canvas to the field </p>
+                <img src="image/invs/inv4-drag_drop.PNG" title="nah.">
+                <p> and inside of the Canvas element, i will use the <code class="lang-csharp">Sorting Override</code></p>
+                <img src="image/invs/inv4-function.PNG" title="adding the function">
+                <p> 
+                    and here i will subtract that sorting to 1.
+                    <br>
+                    is that: if i choose [4], i will use [3] here
+                </p>
+                <img src="image/invs/inv4-function2.PNG" title="the sorting override.">
+                <p> and in the [Pointer Up] event, i will make the same thing, but setting the default value instead.</p>
+                <img src="image/invs/inv4-function1.PNG" title="the default sorting override.">  
+                
+            </div>
+            
+        </details>
+        
+        <!-- Advancing -->
+        <details>
+            
+            <summary>Advancing</summary>
+            <div id="inv-5">
+                
+                <h2 class="header"> Step 7 --> Advancing things </h2>
+                
+                <p> 
+                    Lets assume if you wanna make a list of Items.
+                    <br>
+                    With this way, you can make it better for organize i guess.
+                    <br>
+                    for that, i will rename my buttons to their number (slot1_button -> 1 | slot2_button -> 2)
+                </p>
+                <img src="image/invs/inv5-mods, slope_this_guy.PNG" title="bro i will slope you, bc you read that">
+                <p> and now, i will add a field in the top of [inv.cs]: </p>
+                <pre style="height: 100px"> <code class="lang-csharp">
+public item_data[] item;
+                </code></pre>
+                <p>And now, wiht the file and class created, i will make the fields for the items</p>
+                <pre> <code class="lang-csharp">
+[System.Serializable]   //you <stong>NEED</stong> this line
+public class item_data
+{
+
+    //add any value that you want.
+    //but generally, these exists:
+    public string ID;               //the ID item. Needs to be unique.
+    public string Name;             //the item name.
+    public Sprite icon;             //the sprite icon. How you will see it if theres not have sprite????
+
+}
+                </code></pre>
+                <p> and now, you can see one list created in the Canvas object, in the script </p>
+                <img src="image/invs/inv5-list.PNG" title="no have title here.">
+                <p> For now, it does nothing.</p>
+                
+            </div>
+            
+        </details>
+        
+        <!-- JS Scripts-->
+        
+        <script src="syntax/prism.js"> </script>
+        
+    </body>
+
+</html>

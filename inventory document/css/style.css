@@ -121,3 +121,11 @@ div {
     border-radius: 4px;
     
 }
+
+summary {
+    
+    font-size: 25px;
+    font-style: oblique;
+    font-family: "Pixelify Sans", sans-serif;
+    
+}
